@@ -1,0 +1,11 @@
+{%extends 'weather_app/base_generic.html'%}
+
+{% block content %}
+<div class='centre_btn'>
+<h1 id="service" class="service">
+    <p class=service-1>gets current weather in of any city</p>
+    <p class="service-2">by indicating the city name you get it's current weather information</p>
+</h1>
+<a class='order' href='{% url "weather_app:index" %}'>check weather for a city now! </a>
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+.sidebar{
+    display:flex;
+    justify-content: space-between;
+    align-content:center;
+    list-style-type: none;
+    width: 40%;
+    position: absolute;
+    right: 0%;
+    top: 5%;
+}
+
+.sidebar li a{
+    color: black;
+}

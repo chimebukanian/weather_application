@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  {% block title %}<title>weather</title>{% endblock %}
+    <meta metacharset="utf-8">
+    <meta name="viewport" contains="width=device-width", initial-scale="1">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'weather_app/css/styles.css' %}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <header>
+        {% block sidebar %}
+           <nav class="row" style="background: green; color: white;">
+                <h1 class="col-md-3 text-center">Weather.org</h1>
+
+                <ul class='sidebar'>
+                    <li><a href="{% url 'weather_app:home' %}">home</a><li>
+                    <li><a href="{% url 'weather_app:index' %}">check weather</a><li>
+                    <li><a href="{% url 'weather_app:about' %}">about</a><li>
+                </ul>
+            </nav>
+            
+
+        {% endblock %}    
+    </header>
+
+    <main>        
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        &copy; weather services 2022.
+    </footer>
+</body>
+</html>
+
